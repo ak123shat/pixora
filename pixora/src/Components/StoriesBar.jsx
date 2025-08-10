@@ -1,6 +1,6 @@
 import { Plus } from 'lucide-react';
 import React, { useState , useEffect } from 'react'
-import dummyStoriesData from '../dummyData/dummyStoriesData'; // Assuming you have a dummy data file for stories
+// import dummyStoriesData from '../dummyData/dummyStoriesData'; // Assuming you have a dummy data file for stories
 import moment from 'moment'; // For formatting dates
 import StoryModel from './StoryModel';
 import StoryViewer from './StoryViewer';

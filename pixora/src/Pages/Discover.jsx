@@ -1,5 +1,7 @@
 import { Search } from 'lucide-react';
 import React , {useState} from 'react'
+import UserCard from '../Components/UserCard';
+import Loading from '../Components/Loading';
 
 const Discover = () => {
   const [input , setInput] = useState('');
@@ -38,6 +40,13 @@ const Discover = () => {
             </div>
           </div>
         </div>
+
+        <div className='felx flex-wrap gap-6'>
+          {users.map((user)=>(
+            <UserCard key={user._id} user={user} />
+          ))}
+        </div>
+        {loading && (<Loading height='60vh' />)}
       </div>
     </div>
   )
