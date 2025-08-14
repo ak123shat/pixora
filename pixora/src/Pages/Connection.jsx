@@ -1,7 +1,7 @@
 import React from 'react'
 import {Users , UserPlus , UserCheck , UserRoundPen , MessageSquare } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import dummyConnectionData from '../dummyData/dummyConnectionData'
+// import dummyConnectionData from '../dummyData/dummyConnectionData'
 
 const Connection = () => {
   const [currentTab, setCurrentTab] = React.useState('Followers');

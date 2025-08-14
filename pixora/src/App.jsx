@@ -8,18 +8,18 @@ import Connection from './Pages/Connection'
 import Discover from './Pages/Discover'
 import Profile from './Pages/Profile'
 import CreatePost from './Pages/CreatePost'
-import SignUp from './Pages/SignUp'
-import {useUser} from './Pages/Login'
+//import SignUp from './Pages/SignUp'
+//import Login from './Pages/Login'
 import Layout from './Pages/Layout'
 import {Toaster} from 'react-hot-toast'
 
 const App = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
   return (
     <>
       <Toaster />
       <Routes>
-        <Route path='/' element={ !user ? <Login /> : <Layout />}>
+        <Route path='/' element={ <Login /> }>
         <Route path='/SignUp' element={<SignUp/>} />
          <Route index element={<Feed />} />
          <Route path='messages' element={<Messages />} />

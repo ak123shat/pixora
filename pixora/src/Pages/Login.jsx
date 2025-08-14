@@ -2,6 +2,7 @@ import React from 'react'
 import bgImage from '../assets/bgImage.jpg';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom'
+import { SignIn } from '@clerk/clerk-react';
 
 const Login = () => {
   return (
@@ -20,34 +21,7 @@ const Login = () => {
 
       {/* RightSide: Login Form */}
       <div className='flex-1 flex items-center justify-center p-6 md:p-10'>
-        <div className='bg-blue-500 backdrop-blur-md rounded-lg p-8 w-full max-w-md'>
-          <h2 className='text-2xl font-bold text-white mb-6 text-center'>Sign In</h2>
-          <form className='space-y-4'>
-            <div>
-              <input 
-                type="email" 
-                placeholder="Email" 
-                className='w-full p-3 rounded-lg bg-white/20 text-white placeholder-white border border-white/20 focus:outline-none focus:border-white/40'
-              />
-            </div>
-            <div>
-              <input 
-                type="password" 
-                placeholder="Password" 
-                className='w-full p-3 rounded-lg bg-white/20 text-white placeholder-white border border-white/20 focus:outline-none focus:border-white/40'
-              />
-            </div>
-            <button 
-              type="submit" 
-              className='w-full bg-white/20 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition duration-200'
-            >
-              Sign In
-            </button>
-          </form>
-          <p className='text-white/70 text-center mt-4'>
-            Don't have an account? <Link to="/Signup" className='text-white hover:text-white'>Sign up</Link>
-          </p>
-        </div>
+        <SignIn />
       </div>
     </div>
   )
